@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scouts y Guías Berisso</title>
+    <link rel="stylesheet" href="principal.css">
+</head>
+<body>
+
+    <!--<header class="site-header">
+        <span>Scouts y Guías Berisso</span>
+    </header>-->
+
+    <!-- Sección 1: Hero con carrusel de fondo, título y frase centrados -->
+    <section class="hero">
+        <div class="carousel">
+            <div class="slide">
+                <img src="fotos/berisso 1.jpg" alt="Imagen 1">
+                <!--<p class="slide-caption">Primera diapositiva</p>-->
+            </div>
+            <div class="slide" hidden>
+                <img src="fotos/berisso 2.jpg" alt="Imagen 2">
+                <!--<p class="slide-caption">Segunda diapositiva</p>-->
+            </div>
+            <div class="slide" hidden>
+                <img src="fotos/berisso 3.jpg" alt="Imagen 3">
+                <!--<p class="slide-caption">Tercera diapositiva</p>-->
+            </div>
+
+            <button id="prev" aria-label="Anterior">&#10094;</button>
+            <button id="next" aria-label="Siguiente">&#10095;</button>
+        </div>
+
+        <div class="hero-content">
+            <h1>Scouts y Guias Berisso</h1>
+            <h3>Dejar al mundo mejor de cuando llegaste a el.</h3>
+        </div>
+    </section>
+
+    <!-- Sección 2: Texto a la izquierda, foto cuadrada a la derecha -->
+    <section class="quienes-somos">
+        <div class="quienes-texto">
+            <h3>¿Quiénes somos?</h3>
+            <p>
+                Somos un espacio abierto a toda la comunidad de Berisso donde niños, adolescentes y jóvenes aprenden y crecen juntos.<br><br>
+                Mediante actividades lúdicas, campamentos, proyectos solidarios y experiencias al aire libre, fomentamos la autonomía, el compañerismo y el cuidado del ambiente, acompañando cada etapa desde los 5 hasta los 22 años.
+            </p>
+        </div>
+        <div class="quienes-img">
+            <img src="fotos/instagram scout.jpeg" alt="Actividad Scout en Berisso">
+        </div>
+    </section>
+
+    <!-- Sección 3: Conocenos con dos tarjetas cuadradas lado a lado -->
+    <section class="conocenos">
+        <h2>Conocenos</h2>
+        <div class="conocenos-grid">
+            <a href="ScoutsBerisso.html" class="card card-scouts">
+                <img src="fotos/scouts hombres.jpg" alt="Scouts">
+                <h4>Scouts</h4>
+            </a>    
+            
+            <div class="card card-guias">
+                <a href="GuiasBerisso.html">
+                    <img src="fotos/guias mujeres.jpg" alt="Guías">
+                    <h4>Guías</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>Scouts y Guías Berisso — Siempre Listos</p>
+    </footer>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        function showSlide(n) {
+            slides[index].hidden = true;
+            index = (n + slides.length) % slides.length;
+            slides[index].hidden = false;
+        }
+
+        document.getElementById('next').onclick = () => showSlide(index + 1);
+        document.getElementById('prev').onclick = () => showSlide(index - 1);
+    </script>
+</body>
+</html>
